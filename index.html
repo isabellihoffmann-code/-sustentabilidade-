@@ -1,1 +1,906 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Treinamento de Sustentabilidade</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+
+body{
+    background:#f2f5f2;
+}
+
+
+.tela{
+    display:none;
+    min-height:100vh;
+    padding:30px 15px;
+}
+
+
+.ativa{
+    display:block;
+}
+
+
+.container{
+
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+
+}
+
+
+
+h1,h2{
+
+    color:#2e7d32;
+    margin-bottom:20px;
+
+}
+
+
+p,li{
+
+    line-height:1.6;
+    margin-bottom:12px;
+
+}
+
+
+button{
+
+    background:#2e7d32;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:20px;
+    font-size:16px;
+
+}
+
+
+button:hover{
+
+    background:#1b5e20;
+
+}
+
+
+
+/* Materiais */
+
+
+.itens{
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin:30px 0;
+
+}
+
+
+
+.item{
+
+    background:#e6e6e6;
+    padding:12px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.2s;
+
+}
+
+
+
+.item.selecionado{
+
+    background:#81c784;
+    transform:scale(1.05);
+
+}
+
+
+
+/* Lixeiras */
+
+
+.lixeiras{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+
+}
+
+
+
+.lixeira{
+
+    width:160px;
+    min-height:220px;
+
+    border-radius:15px;
+    padding:15px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    color:white;
+
+    gap:10px;
+
+}
+
+
+
+.lixeira .item{
+
+    width:100%;
+    font-size:14px;
+    cursor:default;
+
+}
+
+
+
+.azul{
+
+    background:#2196F3;
+
+}
+
+
+.vermelho{
+
+    background:#F44336;
+
+}
+
+
+.amarelo{
+
+    background:#FFC107;
+    color:black;
+
+}
+
+
+.verde{
+
+    background:#4CAF50;
+
+}
+
+
+.marrom{
+
+    background:#795548;
+
+}
+
+
+
+#contadorAcertos{
+
+    text-align:center;
+    margin-top:25px;
+    font-size:20px;
+    font-weight:bold;
+
+}
+
+
+
+.pergunta{
+
+    margin-bottom:25px;
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.container{
+
+    padding:20px;
+
+}
+
+
+h1{
+
+    font-size:26px;
+
+}
+
+
+.lixeira{
+
+    width:130px;
+    min-height:180px;
+
+}
+
+
+button{
+
+    width:100%;
+
+}
+
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+</body>
+</html>
+
+<!-- TELA 1 -->
+
+<div class="tela ativa" id="tela1">
+
+<div class="container" style="text-align:center">
+
+<h1>🌱 Treinamento de Sustentabilidade</h1>
+
+<p>
+Aprenda sobre sustentabilidade, separação de resíduos e boas práticas no ambiente de trabalho.
+</p>
+
+
+<button onclick="trocarTela('tela2')">
+Iniciar treinamento
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+<!-- TELA 2 -->
+
+<div class="tela" id="tela2">
+
+<div class="container">
+
+<h2>Recapitulando</h2>
+
+
+<p>
+<b>🌱 O que é sustentabilidade?</b><br>
+É utilizar os recursos naturais e socioeconômicos do presente sem comprometer as próximas gerações.
+</p>
+
+
+<p>
+<b>🏢 Sustentabilidade no trabalho:</b><br>
+É utilizar água, energia e materiais de forma consciente, reduzindo desperdícios e impactos ambientais.
+</p>
+
+
+
+<p><b>⚠ Exemplos de desperdício:</b></p>
+
+<ul>
+
+<li>Luzes e equipamentos ligados sem necessidade.</li>
+
+<li>Uso excessivo de papel.</li>
+
+<li>Desperdício de água.</li>
+
+<li>Uso exagerado de materiais descartáveis.</li>
+
+</ul>
+
+
+
+<p><b>✅ Boas práticas:</b></p>
+
+
+<ul>
+
+<li>Economizar energia.</li>
+
+<li>Reduzir impressões.</li>
+
+<li>Reutilizar materiais.</li>
+
+<li>Separar corretamente os resíduos.</li>
+
+</ul>
+
+
+
+<button onclick="trocarTela('tela3')">
+
+Separação de lixo
+
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- TELA 3 -->
+
+<div class="tela" id="tela3">
+
+<div class="container">
+
+
+<h2>🗑 Separe os resíduos corretamente</h2>
+
+
+<p>
+Clique no material e depois clique na lixeira correta.
+</p>
+
+
+
+<div class="itens">
+
+
+<div class="item" id="papel1">
+📄 Papel
+</div>
+
+
+<div class="item" id="papel2">
+📦 Caixa de papelão
+</div>
+
+
+<div class="item" id="plastico1">
+🥤 Garrafa PET
+</div>
+
+
+<div class="item" id="plastico2">
+🧴 Embalagem plástica
+</div>
+
+
+<div class="item" id="metal1">
+🥫 Lata
+</div>
+
+
+<div class="item" id="metal2">
+🔩 Tampa metálica
+</div>
+
+
+<div class="item" id="vidro1">
+🍾 Garrafa de vidro
+</div>
+
+
+<div class="item" id="organico1">
+🍌 Casca de banana
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="lixeiras">
+
+
+
+<div class="lixeira azul" data-tipo="papel">
+
+<h3>🟦 Papel</h3>
+
+</div>
+
+
+
+<div class="lixeira vermelho" data-tipo="plastico">
+
+<h3>🟥 Plástico</h3>
+
+</div>
+
+
+
+<div class="lixeira amarelo" data-tipo="metal">
+
+<h3>🟨 Metal</h3>
+
+</div>
+
+
+
+<div class="lixeira verde" data-tipo="vidro">
+
+<h3>🟩 Vidro</h3>
+
+</div>
+
+
+
+<div class="lixeira marrom" data-tipo="organico">
+
+<h3>🟫 Orgânico</h3>
+
+</div>
+
+
+</div>
+
+
+
+
+<div id="contadorAcertos">
+
+Materiais separados: 0/8
+
+</div>
+
+
+
+<div style="text-align:center">
+
+<button id="btnQuiz" 
+onclick="trocarTela('tela4')" 
+style="display:none">
+
+Ir para o Quiz
+
+</button>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- TELA 4 - QUIZ -->
+
+
+<div class="tela" id="tela4">
+
+
+<div class="container">
+
+
+<h2>📝 Quiz Final</h2>
+
+
+
+
+<div class="pergunta">
+
+<p>
+<b>1. Qual o objetivo da sustentabilidade?</b>
+</p>
+
+
+<input type="radio" name="q1" value="1">
+Usar recursos sem prejudicar futuras gerações.
+
+<br>
+
+<input type="radio" name="q1" value="0">
+Utilizar todos os recursos rapidamente.
+
+</div>
+
+
+
+
+
+<div class="pergunta">
+
+<p>
+<b>2. Deixar luzes ligadas sem necessidade é:</b>
+</p>
+
+
+<input type="radio" name="q2" value="1">
+Desperdício de recursos.
+
+<br>
+
+<input type="radio" name="q2" value="0">
+Uma prática sustentável.
+
+</div>
+
+
+
+
+
+<div class="pergunta">
+
+<p>
+<b>3. Garrafa PET deve ser descartada onde?</b>
+</p>
+
+
+<input type="radio" name="q3" value="1">
+Plástico.
+
+<br>
+
+<input type="radio" name="q3" value="0">
+Papel.
+
+</div>
+
+
+
+
+
+<div class="pergunta">
+
+<p>
+<b>4. Qual atitude ajuda o meio ambiente?</b>
+</p>
+
+
+<input type="radio" name="q4" value="1">
+Reutilizar materiais.
+
+<br>
+
+<input type="radio" name="q4" value="0">
+Aumentar desperdícios.
+
+</div>
+
+
+
+
+
+<div class="pergunta">
+
+<p>
+<b>5. Um desperdício comum nas empresas é:</b>
+</p>
+
+
+<input type="radio" name="q5" value="1">
+Impressões desnecessárias.
+
+<br>
+
+<input type="radio" name="q5" value="0">
+Separação correta dos resíduos.
+
+</div>
+
+
+
+<button onclick="corrigirQuiz()">
+
+Finalizar treinamento
+
+</button>
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<!-- TELA FINAL -->
+
+
+<div class="tela" id="tela5">
+
+
+<div class="container" style="text-align:center">
+
+
+<h1>🎉 Treinamento concluído!</h1>
+
+
+<p>
+Parabéns! Você concluiu o treinamento de sustentabilidade no ambiente de trabalho.
+</p>
+
+
+<p>
+Continue aplicando práticas sustentáveis no dia a dia.
+</p>
+
+
+<h2 id="pontuacaoFinal"></h2>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+
+
+function trocarTela(id){
+
+
+document.querySelectorAll(".tela").forEach(function(tela){
+
+tela.classList.remove("ativa");
+
+});
+
+
+document.getElementById(id).classList.add("ativa");
+
+
+}
+
+
+
+
+
+
+// Separação dos materiais
+
+
+let selecionado = null;
+
+let acertos = 0;
+
+
+
+document.querySelectorAll(".item").forEach(function(item){
+
+
+
+item.addEventListener("click",function(){
+
+
+
+document.querySelectorAll(".item").forEach(function(i){
+
+i.classList.remove("selecionado");
+
+});
+
+
+
+selecionado = item;
+
+
+item.classList.add("selecionado");
+
+
+
+});
+
+
+});
+
+
+
+
+
+
+
+document.querySelectorAll(".lixeira").forEach(function(lixeira){
+
+
+
+lixeira.addEventListener("click",function(){
+
+
+
+if(selecionado == null){
+
+return;
+
+}
+
+
+
+let tipo = lixeira.dataset.tipo;
+
+
+let correto = false;
+
+
+
+if(tipo=="papel" && selecionado.id.includes("papel"))
+correto=true;
+
+
+if(tipo=="plastico" && selecionado.id.includes("plastico"))
+correto=true;
+
+
+if(tipo=="metal" && selecionado.id.includes("metal"))
+correto=true;
+
+
+if(tipo=="vidro" && selecionado.id.includes("vidro"))
+correto=true;
+
+
+if(tipo=="organico" && selecionado.id.includes("organico"))
+correto=true;
+
+
+
+
+
+if(correto){
+
+
+
+lixeira.appendChild(selecionado);
+
+
+
+selecionado.classList.remove("selecionado");
+
+
+
+selecionado.style.cursor="default";
+
+
+selecionado = null;
+
+
+
+acertos++;
+
+
+
+document.getElementById("contadorAcertos").innerHTML =
+
+"Materiais separados: "+acertos+"/8";
+
+
+
+
+
+if(acertos==8){
+
+
+
+document.getElementById("contadorAcertos").innerHTML +=
+
+"<br>✅ Separação concluída!";
+
+
+
+document.getElementById("btnQuiz").style.display="inline-block";
+
+
+}
+
+
+
+}
+
+
+
+});
+
+});
+
+
+
+
+
+
+
+
+// Quiz
+
+
+function corrigirQuiz(){
+
+
+let pontos = 0;
+
+
+
+for(let i=1;i<=5;i++){
+
+
+let resposta = document.querySelector(
+'input[name="q'+i+'"]:checked'
+);
+
+
+
+if(resposta){
+
+pontos += Number(resposta.value);
+
+}
+
+
+}
+
+
+
+document.getElementById("pontuacaoFinal").innerHTML =
+
+"Pontuação final: "+pontos+"/5";
+
+
+
+trocarTela("tela5");
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
